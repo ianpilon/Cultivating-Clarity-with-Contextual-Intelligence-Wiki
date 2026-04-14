@@ -25,5 +25,8 @@
   },
   "engines": {
     "node": ">=18.0.0 <23.0.0"
+  },
+  "overrides": {
+    "next-mdx-remote": "^5.0.0"
   }
 }
