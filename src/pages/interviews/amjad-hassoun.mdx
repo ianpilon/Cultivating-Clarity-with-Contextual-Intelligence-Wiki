@@ -1,0 +1,79 @@
+# Amjad Hassoun
+
+**Summary**: Discovery interview with Amjad Hassoun (October 26, 2023) — a fifth-year computer science student at the University of Toronto whose work at the intersection of AI development and ethical considerations offers a fresh perspective on LLMs, data bias, prompt engineering, and teaching children critical thinking through AI demonstrations.
+
+**Sources**: CULTIVATING CLARITY.md
+
+**Last updated**: 2026-04-14
+
+---
+
+## Background
+
+Amjad Hassoun was a fifth-year computer science student at the University of Toronto at the time of the interview. His journey into AI was not straightforward — he struggled in his first semester, nearly failing the POST requirement for CS majors. This experience of being "out of place" while everyone else appeared to succeed served as a reality check that forced him to refocus.
+
+The COVID-19 pandemic, while challenging, allowed him to dive deeper into foundational computer science through intensive independent study. He secured a co-op position at Spurry, an app development company focused on educational apps (driving tests for New Zealand/Australia, Canadian citizenship test prep, Python Academy).
+
+### The ChatGPT Awakening
+Amjad's CEO Ben was an early evangelist for Text DaVinci 3 (the precursor to ChatGPT 3.5). Initially indifferent, Amjad eventually experienced the technology firsthand and was transformed by its capabilities. It helped him navigate complex Xcode bugs, understand C programming at a deeper level, and ultimately build a Python interpreter that ran locally on an iPhone — bridging Swift to C to Python to Flutter, with no API calls.
+
+After his co-op, Amjad went into "go mode" — posting services on Fiverr, engaging in Discord communities, attending blockchain meetups, and building AI chatbots (including "AskCody" for Python questions and a repair shop chatbot with a query classification pipeline).
+
+## Key Concepts
+
+### The AI Pipeline — Beyond Simple Q&A
+Amjad's repair shop chatbot illustrates the real power of generative AI: it's not just about asking a question and receiving an answer. The system uses the generative AI as a **query classifier** — determining whether to look up repair prices, search for tickets, or directly respond. This multi-action interpretation of user intent represents a more sophisticated use of LLMs than simple chat.
+
+### The Attention Mechanism and Context
+Ian drew a parallel between Amjad's work capturing children's attention with AI demos and the "Attention Is All You Need" paper that introduced the Transformer architecture. Amjad explained: "The Transformer allows you to examine all the context and data it has been trained on. As it's generating output, it considers the relevant context and notes to produce the best output."
+
+This mirrors how human brains process information — each person's unique history shapes their perceptions. The Transformer can analyze vast datasets to provide context-informed responses, reflecting both positive and negative associations based on historical context.
+
+### What Makes GPT Special — Reinforcement Learning from Human Feedback
+Amjad highlighted that GPT's distinctiveness comes from its reward system (RLHF). Before public release, people worldwide evaluated multiple outputs and selected the best ones, creating a feedback loop that taught the model to favor positively-received outputs. Unlike models that solely mimic training data, GPT's reinforcement learning enables continuous improvement based on human judgment.
+
+### Cultural Context in AI Responses
+Ian and Amjad explored how the same query to different models (GPT vs. Bard) produces different responses because of different training, cultural tuning, and safety pipelines. A model serving users in the Philippines would structure responses differently than one serving Ontario — the AI must be "clever enough to tailor its reply" to the cultural context.
+
+### AI Ethics and Data Bias
+This was the most substantive ethical discussion in the interview:
+
+**The Banking Bias Example**: Historical data shows that Black applicants were less likely to be approved for mortgages. An AI trained on this data would perpetuate the bias. But the question of blame is complex — the AI is "just performing calculations, analyzing data, searching for patterns."
+
+Amjad's nuanced insight: AI can actually serve as a **tool to uncover biases**. "The only way to reveal our human flaws is by training an AI model on it and then examining the inferences it produces."
+
+However, the attempt to "fix" bias by cleaning training data introduces a different bias. If a bank removes all instances of unfair treatment before training, "it's still a biased approach" — they're hiding their history, not addressing the root cause.
+
+### Teaching Children Through AI Demos
+At the Toronto French School, Amjad demonstrated voice cloning to children — recording their voices and manipulating recordings to make them appear to say something entirely different. The children's reactions ("their astonished faces truly captured the moment") created the emotional hook needed to then teach deeper lessons about:
+
+- Ethics of voice cloning
+- What if someone clones the president's voice?
+- Who gets copyright on AI-generated songs?
+- Critical thinking about information authenticity
+
+This approach — **capturing attention first, then teaching critical thinking** — directly connects to [Nick Shackleton Jones](/interviews/nick-shackleton-jones)'s [Affective Context](/concepts/affective-context) model: emotional engagement precedes meaningful learning.
+
+## Connection to Ian's Work
+
+Amjad was the technical advisor for Ian's NeuroKick project — the leadership development AI tool that uses RAG to detect diminishing management behaviors in real-time. Amjad helped Ian understand:
+
+- The **Peak-End Rule** parallel: LLMs at the time excelled at capturing beginnings and ends of documents but struggled with middle content, similar to how humans prioritize peak moments and endings in memory
+- **Chunking**: Engineering prompts that acknowledge LLM limitations and optimize performance for specific objectives
+- **Prompt engineering**: The art of providing tighter context to get more precise, relevant outputs
+
+## Key Quotes
+
+- "It's about the ability to interpret a question and simultaneously perform multiple actions based on that query."
+- "The only way to reveal our human flaws is by training an AI model on it and then examining the inferences it produces."
+- "If you edit the training data to remove bias, you're introducing bias differently."
+- "It's really about ethics — we can show kids all these cool new technologies, but that's not the point."
+- "We want the kids to be asking these questions from a young age."
+
+## Related pages
+- [Ai and Contextual Intelligence](/synthesis/ai-and-contextual-intelligence)
+- [Ethics and Context](/synthesis/ethics-and-context)
+- [Affective Context](/concepts/affective-context)
+- [Nick Shackleton Jones](/interviews/nick-shackleton-jones)
+- [Ori Freiman](/interviews/ori-freiman)
+- [Contextual Intelligence](/concepts/contextual-intelligence)

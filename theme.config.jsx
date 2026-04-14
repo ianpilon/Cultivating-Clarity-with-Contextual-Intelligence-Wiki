@@ -1,18 +1,20 @@
+import WikiChat from './src/components/WikiChat'
+
 export default {
-  logo: <span style={{ fontWeight: 'bold' }}>Create Modern Docs</span>,
+  logo: <span style={{ fontWeight: 'bold' }}>Cultivating Clarity</span>,
   project: {
-    link: 'https://github.com/yourusername/docs-creation-guide'
+    link: 'https://github.com/ianpilon/Create-Modern-Documentation-Sites'
   },
-  docsRepositoryBase: 'https://github.com/yourusername/docs-creation-guide/tree/main',
+  docsRepositoryBase: 'https://github.com/ianpilon/Create-Modern-Documentation-Sites/tree/main',
   useNextSeoProps() {
     return {
-      titleTemplate: '%s – Create Modern Documentation'
+      titleTemplate: '%s – Cultivating Clarity'
     }
   },
   head: (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="Learn how to create modern documentation sites with Next.js and Nextra" />
+      <meta name="description" content="Cultivating Clarity: The Art of Discerning What Matters Using Contextual Intelligence — A comprehensive knowledge base by Ian Timotheos Pilon" />
     </>
   ),
   navigation: {
@@ -20,7 +22,7 @@ export default {
     next: true
   },
   footer: {
-    text: 'Create Modern Documentation Guide ' + new Date().getFullYear()
+    text: 'Cultivating Clarity — Ian Timotheos Pilon ' + new Date().getFullYear()
   },
   sidebar: {
     defaultMenuCollapseLevel: 1,
@@ -28,6 +30,7 @@ export default {
   },
   toc: {
     float: true,
-    title: 'On This Page'
+    title: 'On This Page',
+    extraContent: <WikiChat />,
   }
 }

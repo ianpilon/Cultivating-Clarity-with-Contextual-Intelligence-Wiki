@@ -1,0 +1,90 @@
+# NeuroKick
+
+**Summary**: Ian Pilon's AI-powered leadership development tool that uses Retrieval Augmented Generation (RAG) to detect accidental diminishing management behaviors in real-time — born from a personal struggle with the "Blind Manager Problem" and developed with guidance from Amjad Hassoun.
+
+**Sources**: CULTIVATING CLARITY.md
+
+**Last updated**: 2026-04-14
+
+---
+
+## Origin Story
+
+While leading a team of 10 product designers at Charles Hoskinson's blockchain engineering company (IOHK), Ian faced a problem he couldn't solve with traditional tools: he had no way to measure his qualitative performance as a manager.
+
+An executive coach, Darrell O'Donnell, recommended a leadership book with a chapter on "accidental diminishing behavior." Ian discovered his most prevalent blind spot: **over-indexing on solving other people's problems**. Junior designers appreciated this, but senior designers wanted autonomy to solve hard problems themselves. With back-to-back 1:1 calls across seniority levels, Ian couldn't context-switch fast enough to adapt his management style to each person's needs.
+
+## The Epiphany
+
+When ChatGPT arrived and Ian discovered RAG (Retrieval Augmented Generation), he realized he could build a system that:
+
+1. **Listens** to the context of manager-subordinate conversations in real-time
+2. **Compares** the conversation against a behavioral framework (the "accidental diminishing behavior" chapter)
+3. **Flags** specific diminishing behaviors when they appear
+4. **Tracks** trends over time — weekly, monthly baselines
+
+## How It Works
+
+The system is designed as a **"calm" technology** — it runs in the background without demanding attention during conversations. Key design principles:
+
+- **Private by design**: Does not record voices or save employee data. Only understands live dynamic context.
+- **Narrow context**: The RAG system is given a tighter context than general-purpose AI — "This is what I want you to focus on" + a specific behavioral dataset
+- **Non-intrusive**: The UI is designed to be forgotten during use; it pings trends to email/phone on the user's schedule
+- **User-controlled**: "I control the technology, not the other way around"
+
+### The Prompt Architecture
+Instead of searching "all the world's data," NeuroKick uses a constrained prompt:
+- Defines the manager-subordinate relationship context
+- Provides the behavioral framework as the comparison dataset
+- Asks: "Is Ian exhibiting any diminishing behavior in this context window?"
+- Returns specific observations tied to the framework
+
+## Technical Development
+
+[Amjad Hassoun](/interviews/amjad-hassoun) served as technical advisor, helping Ian navigate:
+
+- **LLM context window limitations**: At the time, LLMs struggled with the middle sections of long documents (paralleling the [Peak-End Rule](/concepts/memory-as-dynamic-process))
+- **Chunking**: Engineering prompts that acknowledge LLM limitations and optimize for specific objectives
+- **Prompt engineering**: The art of providing tighter context for more precise outputs
+
+The initial proof-of-concept used OpenAI's API, though Ian planned to move to a more private architecture.
+
+## Ethical Dimensions
+
+When Ian showed NeuroKick to [Ori Freiman](/interviews/ori-freiman), the ethics discussion was immediate:
+
+1. **Transparency**: Inform the team about the tool before using it
+2. **Consent**: Seek their agreement to participate
+3. **Sharing results**: Share insights with those affected, not just use them privately
+4. **Data ownership**: Consider whether employees should own data stored about them
+5. **Right to erasure**: Can someone request their data be deleted?
+
+Ian's own moral intuition aligned with Ori's guidance — "the feeling that something about using the tool without my team's knowledge didn't sit right."
+
+## Responses from Interviewees
+
+### Robert Scoble
+> "It's interesting to have a little coach listening for a very specific thing, right? And to have it be that fast is really cool."
+
+Scoble immediately saw the pattern's extensibility: "Can it figure out 10 things to look for?" He also connected it to his psychiatrist using ChatGPT for therapy session support — "the same engine you guys are both using but doing completely different things."
+
+### Bob Moesta
+The tool embodies Moesta's principle of understanding outcomes over outputs. The output is behavioral flags; the outcome is becoming a better leader — and ultimately, creating better experiences for team members.
+
+## Broader Significance
+
+NeuroKick represents a new category of AI application: **contextual self-awareness tools**. Rather than replacing human judgment, it augments it — making invisible interpersonal dynamics visible so the human can choose to grow.
+
+> "Not everybody's going to want to do it, but I'm trying to develop myself and keep up with AI so if I'm not figuring out how to perform as an optimal human, then I can't see how to be competitive in the future."
+
+The concept extends beyond management: "How am I doing as a dad with my kids?" or any relationship where blind spots have consequences.
+
+## Related pages
+- [Amjad Hassoun](/interviews/amjad-hassoun)
+- [Ori Freiman](/interviews/ori-freiman)
+- [Robert Scoble](/interviews/robert-scoble)
+- [Empathy in Innovation](/concepts/empathy-in-innovation)
+- [Ai and Contextual Intelligence](/synthesis/ai-and-contextual-intelligence)
+- [Ethics and Context](/synthesis/ethics-and-context)
+- [Struggling Moments](/concepts/struggling-moments)
+- [Contextual Intelligence](/concepts/contextual-intelligence)
